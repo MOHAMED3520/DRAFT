@@ -1,9 +1,12 @@
- #include "tm4c123.h"
+#include "../../HEADERS/MCAL/GPIO.h"
+#include "../../SERVICES/Bit_Operations.h"
+#include "../../HEADERS/HAL/LED_SWITCHES.h"
+#include "../../SERVICES/tm4c123.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "UART.h"
-#include "GPS.h"
+#include "../../HEADERS/MCAL/UART.h"
+#include "../../HEADERS/HAL/GPS.h"
 
 unsigned char button_in_sw1;
 unsigned char button_in_sw2;
