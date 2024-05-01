@@ -5,6 +5,8 @@
 #include "UART.h"
 #include "GPS.h"
 
+unsigned char button_in_sw1;
+unsigned char button_in_sw2;
 int  main(void)
 {
 		char gprmc_sentence[] = "$GPRMC,123456.789,A,1234.5678,N,5678.1234,E,...";
@@ -19,13 +21,23 @@ int  main(void)
     int i = 0;
     char c;	
 	  uart_init();
+	  initialize_PortF ();
     Delay(1); 
     printstring("Hello World \n");
     Delay(10); 
 		
 
     while(1)
-    {
+    {		button_in_sw1=read_switch_data(SW1);
+		//button_in_sw2=read_switch_data(SW2); //as you like any switch you want
+		if(button_in_sw1==SW_Pressed) //as you like any switch you want(SW1 OR SW2)
+			set_LED(LED_ON,Green_LED); //as you like any LED you want(R,G,B)
+		else{
+			set_LED(LED_OFF,Red_LED);
+			set_LED(LED_OFF,Blue_LED);
+			set_LED(LED_OFF,Green_LED);
+		}
+			
          c = UART1_Receiver(); /* get a character from UART1 */
         if(c == '$') {
             i = 0; /* reset index if we found a new sentence starting */
