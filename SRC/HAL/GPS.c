@@ -1,9 +1,9 @@
-#include "tm4c123.h"
+#include "../../SERVICES/tm4c123.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "GPS.h"
+#include "../../HEADERS/HAL/GPS.h"
 #define pi 3.14159265358979323846
 const double Earth_radius =6371000;
 

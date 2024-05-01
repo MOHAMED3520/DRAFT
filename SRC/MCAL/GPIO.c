@@ -1,5 +1,5 @@
-#include "../Services/tm4c123gh6pm.h"
-#include "../Include/Bit_Operations.h"
+#include "../../SERVICES/tm4c123.h"
+#include "../../SERVICES/Bit_Operations.h"
 //**initialize portA**//
 void initialize_PortA(){
 set_bit(SYSCTL_RCGCGPIO_R,0); // BIT 0

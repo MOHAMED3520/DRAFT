@@ -1,6 +1,6 @@
 
-#include "tm4c123.h"
-#include "UART.h"
+#include "../../SERVICES/tm4c123.h"
+#include "../../HEADERS/MCAL/UART.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>

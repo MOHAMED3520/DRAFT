@@ -1,6 +1,6 @@
-#include "../Services/tm4c123gh6pm.h"
-#include "../Include/Bit_Operations.h"
-#include "../Include/LED_SWITCHES.h"
+#include "../../SERVICES/tm4c123.h"
+#include "../../SERVICES/Bit_Operations.h"
+#include "../../HEADERS/HAL/LED_SWITCHES.h"
 
 
 //**Get_switches_data**//
